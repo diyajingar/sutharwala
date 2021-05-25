@@ -98,9 +98,7 @@ form{
 .p-150 {
   padding: 0px 0;
 }
-.mt-10 {
-  margin-top: 7.5rem;
-}
+
 form {
   padding: 20px;
 }
@@ -109,6 +107,10 @@ form {
 }
 .p-1 {
   padding: 0px 1.25rem !important;
+}
+.text-3xl {
+  font-size: 1.4rem !important;
+
 }
 .logo{
   position: relative;
