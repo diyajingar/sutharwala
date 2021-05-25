@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sutharwala/static/css/main.18f9490c.chunk.css",
+    "main.js": "/sutharwala/static/js/main.801f2e23.chunk.js",
+    "main.js.map": "/sutharwala/static/js/main.801f2e23.chunk.js.map",
+    "runtime-main.js": "/sutharwala/static/js/runtime-main.b1809089.js",
+    "runtime-main.js.map": "/sutharwala/static/js/runtime-main.b1809089.js.map",
+    "static/css/2.343194d5.chunk.css": "/sutharwala/static/css/2.343194d5.chunk.css",
+    "static/js/2.ca3e4ddb.chunk.js": "/sutharwala/static/js/2.ca3e4ddb.chunk.js",
+    "static/js/2.ca3e4ddb.chunk.js.map": "/sutharwala/static/js/2.ca3e4ddb.chunk.js.map",
+    "static/js/3.5e6e18ed.chunk.js": "/sutharwala/static/js/3.5e6e18ed.chunk.js",
+    "static/js/3.5e6e18ed.chunk.js.map": "/sutharwala/static/js/3.5e6e18ed.chunk.js.map",
+    "index.html": "/sutharwala/index.html",
+    "static/css/2.343194d5.chunk.css.map": "/sutharwala/static/css/2.343194d5.chunk.css.map",
+    "static/css/main.18f9490c.chunk.css.map": "/sutharwala/static/css/main.18f9490c.chunk.css.map",
+    "static/js/2.ca3e4ddb.chunk.js.LICENSE.txt": "/sutharwala/static/js/2.ca3e4ddb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b1809089.js",
+    "static/css/2.343194d5.chunk.css",
+    "static/js/2.ca3e4ddb.chunk.js",
+    "static/css/main.18f9490c.chunk.css",
+    "static/js/main.801f2e23.chunk.js"
+  ]
+}
