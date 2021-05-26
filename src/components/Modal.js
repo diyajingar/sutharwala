@@ -11,9 +11,11 @@ function Modal(props) {
 
     emailjs.sendForm('gmail', 'service_op17cyc', e.target, 'user_znv0CUhhBwi9RaaMD5pQi')
       .then((result) => {
-          console.log(result.text);
+          // console.log(result.text);
+          console.log('SUCCESS!', result.status, result.text);
       }, (error) => {
-          console.log(error.text);
+          // console.log(error.text);
+          console.log('FAILED...', error);
       });
       e.target.reset()
   }
@@ -49,38 +51,41 @@ function Modal(props) {
                     <CustomTextInput
                       id="Name"
                       label="Name"
+                      name="Name"
                       onChange={(e) => console.log(e)}
                     />
                     <CustomTextInput
                       id="MobileNumber"
                       label="Mobile Number"
+                      name="MobileNumber"
                       onChange={(e) => console.log(e)}
                     />
                     <CustomTextInput
                       id="Email"
                       label="Email Address"
+                      name="Email"
                       onChange={(e) => console.log(e)}
                     />
                     <CustomTextInput
                       id="City"
                       label="City"
+                      name="city"
                       onChange={(e) => console.log(e)}
                     />
                     <CustomTextInput
                       id="Message"
                       type="text"
                       label="Message"
+                      name="Message"
                       onChange={(e) => console.log(e)}
                     />
                     <div className="buttonTopMargin">
-                      <Link
+                      <button
                       type="submit"
-                       
-                       
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                       >
                         Submit
-                      </Link>
+                      </button>
                     </div>
                   </form>
                 </div>
