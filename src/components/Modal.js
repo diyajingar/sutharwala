@@ -11,11 +11,13 @@ function Modal(props) {
 
     emailjs.sendForm('gmail', 'service_op17cyc', e.target, 'user_znv0CUhhBwi9RaaMD5pQi')
       .then((result) => {
-          // console.log(result.text);
-          console.log('SUCCESS!', result.status, result.text);
+         return <div>
+           <p> Thanks for connect</p>
+         </div>
+         
       }, (error) => {
-          // console.log(error.text);
-          console.log('FAILED...', error);
+          console.log(error.text);
+       
       });
       e.target.reset()
   }
