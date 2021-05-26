@@ -45,7 +45,7 @@ function Modal(props) {
                   </div>
 
                   {/*body*/}
-                  <form className="form Modal-form" noValidate>
+                  <form className="form Modal-form"  onSubmit={sendEmail} noValidate>
                     <CustomTextInput
                       id="Name"
                       label="Name"
@@ -74,7 +74,9 @@ function Modal(props) {
                     />
                     <div className="buttonTopMargin">
                       <Link
-                        onClick={() => sendEmail ()}
+                      type="submit"
+                       
+                       
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                       >
                         Submit
