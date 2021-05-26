@@ -11,9 +11,7 @@ function Modal(props) {
 
     emailjs.sendForm('gmail', 'service_op17cyc', e.target, 'user_znv0CUhhBwi9RaaMD5pQi')
       .then((result) => {
-         return <div>
-           <p> Thanks for connect</p>
-         </div>
+          console.log(result.text);
          
       }, (error) => {
           console.log(error.text);
