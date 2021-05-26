@@ -1,15 +1,15 @@
 import React from "react";
 import CloseIcon from "@material-ui/icons/Close";
-import { Link } from "react-router-dom";
+
 import SlidingPane from "react-sliding-pane";
 import CustomTextInput from "./CustomTextInput";
 import emailjs from 'emailjs-com';
 function Modal(props) {
-  const [showModal, setShowModal] = React.useState(false);
+
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('gmail', 'service_op17cyc', e.target, 'user_znv0CUhhBwi9RaaMD5pQi')
+    emailjs.sendForm('service_hv9p905', 'template_8cv1evc', e.target, 'user_znv0CUhhBwi9RaaMD5pQi')
       .then((result) => {
           console.log(result.text);
          
