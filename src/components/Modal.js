@@ -3,8 +3,20 @@ import CloseIcon from "@material-ui/icons/Close";
 import { Link } from "react-router-dom";
 import SlidingPane from "react-sliding-pane";
 import CustomTextInput from "./CustomTextInput";
+import emailjs from 'emailjs-com';
 function Modal(props) {
   const [showModal, setShowModal] = React.useState(false);
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'service_op17cyc', e.target, 'user_znv0CUhhBwi9RaaMD5pQi')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  }
   return (
     <div>
       <SlidingPane
@@ -50,6 +62,11 @@ function Modal(props) {
                       onChange={(e) => console.log(e)}
                     />
                     <CustomTextInput
+                      id="City"
+                      label="City"
+                      onChange={(e) => console.log(e)}
+                    />
+                    <CustomTextInput
                       id="Message"
                       type="text"
                       label="Message"
@@ -57,7 +74,7 @@ function Modal(props) {
                     />
                     <div className="buttonTopMargin">
                       <Link
-                        onClick={() => props.onClose()}
+                        onClick={() => sendEmail ()}
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                       >
                         Submit
