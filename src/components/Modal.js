@@ -9,12 +9,12 @@ function Modal(props) {
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('service_hv9p905', 'template_8thxsei', e.target, 'user_znv0CUhhBwi9RaaMD5pQi')
+    emailjs.sendForm('service_hv9p905', 'template_8cv1evc', e.target, 'user_znv0CUhhBwi9RaaMD5pQi')
       .then((result) => {
-          console.log(result.text);
+          alert(result.text);
          
       }, (error) => {
-          console.log(error.text);
+        alert(error.text);
        
       });
       e.target.reset()
