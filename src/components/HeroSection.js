@@ -1,62 +1,204 @@
-
 import React from "react";
 
 import "react-sliding-pane/dist/react-sliding-pane.css";
+import Grid from "@material-ui/core/Grid";
+import LOGO from "../LOGO.png";
 
-import Modal from "./Modal"
+import clsx from "clsx";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import CloseIcon from "@material-ui/icons/Close";
+import CustomTextInput from "./CustomTextInput";
+import emailjs from "emailjs-com";
+import Divider from "@material-ui/core/Divider";
+
+const drawerWidth = 350;
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+  },
+  appBar: {
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginRight: drawerWidth,
+  },
+  title: {
+    flexGrow: 1,
+  },
+  hide: {
+    display: "none",
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  drawerHeader: {
+    display: "flex",
+    alignItems: "center",
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: "flex-start",
+  },
+
+  contentShift: {
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginRight: 0,
+  },
+}));
+
 function HeroSection(props) {
-  const [showModal, setShowModal] = React.useState(false);
- 
+  const classes = useStyles();
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hv9p905",
+        "template_8cv1evc",
+        e.target,
+        "user_znv0CUhhBwi9RaaMD5pQi"
+      )
+      .then(
+        (result) => {
+          alert(result.text);
+        },
+        (error) => {
+          alert(error.text);
+        }
+      );
+    e.target.reset();
+  }
   return (
     <div className="o-hidden">
-      <img
-        src="https://i.ibb.co/zxxDpKK/imgpsh-fullsize-anim-1.png"
-        alt="logo"
-        className="logo"
-      />
-      
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pb-8  sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div className="p-150 tsm:text-center lg:text-left">
-              
-                <h1 className=" ext-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="block xl:inline">Our website is</span>{" "}
-                  <span className="block text-indigo-600 xl:inline">
-                    under construction
-                  </span>
+      <Grid container>
+        <Grid item xs={12}>
+          <img
+            className="heroimg mobile"
+            src="https://i.ibb.co/vqgqXDT/New-Project-4.png"
+            alt=""
+          />
+          <Drawer
+          className={classes.drawer}
+          variant="persistent"
+          anchor="right"
+          open={open}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+        >
+          <div className={classes.drawerHeader}>
+            <Grid item xs={10}>
+              <h4 className="text-3xl p-10 font-semibold">Inquiry Form</h4>
+            </Grid>
+            <Grid item xs={2}>
+            <CloseIcon  onClick={handleDrawerClose} />
+             
+            </Grid>
+            <div className="flex"></div>
+          </div>
+          <Divider />
+          <form className="form Modal-form" onSubmit={sendEmail} noValidate>
+            <CustomTextInput
+              id="Name"
+              label="Name"
+              name="Name"
+              onChange={(e) => console.log(e)}
+            />
+            <CustomTextInput
+              id="MobileNumber"
+              label="Mobile Number"
+              name="MobileNumber"
+              onChange={(e) => console.log(e)}
+            />
+            <CustomTextInput
+              id="Email"
+              label="Email Address"
+              name="Email"
+              onChange={(e) => console.log(e)}
+            />
+            <CustomTextInput
+              id="City"
+              label="City"
+              name="city"
+              onChange={(e) => console.log(e)}
+            />
+            <CustomTextInput
+              id="Message"
+              type="text"
+              label="Message"
+              name="Message"
+              onChange={(e) => console.log(e)}
+            />
+            <div className="buttonTopMargin">
+              <button type="submit" className="button">
+                Submit
+              </button>
+            </div>
+          </form>
+        </Drawer>
+        </Grid>
+        <Grid item md={6} sm={12}>
+          <Grid container justifyContent="center">
+            <main
+              className={clsx(classes.content, {
+                [classes.contentShift]: open,
+              })}
+            >
+              <div />
+              <img src={LOGO} alt="logo" className="logo" />
+              <div className="textStyle">
+                <h1>
+                  Our website is
+                  <span className=""> under construction</span>
                 </h1>
-                <p className="m-40 mb-5 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-1 md:text-xl lg:mx-0">
+                <p className="">
                   Sutharwala is Gujarat's largest home services marketplace the
                   platform helps customers to book reliable home/offices and
                   other sectors services like service of carpenter, furniture,
                   fixture repairing ,interior designing turnkey projects etc.
                 </p>
-                <button
-                  class="mobileButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  onClick={() => setShowModal(true)}
-                >
+                <button class="button" onClick={handleDrawerOpen}>
                   Contact Us
                 </button>
+                <div>
+                <WhatsAppIcon/><MailOutlineIcon/>
               </div>
+              </div>
+             
             </main>
-          </div>
-          {showModal ? (
-            <>
-            <Modal showModal={showModal} onClose={()=> setShowModal(false)}/>
-            </>
-          ) : null}
-        </div>
-
-        <div className="lg:absolute lg:inset-y-0 lg:right-0">
-          <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src="https://i.ibb.co/vqgqXDT/New-Project-4.png"
-            alt=""
-          />
-        </div>
-      </div>
+          </Grid>
+        </Grid>
+        
+      </Grid>
     </div>
   );
 }
