@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "http://www.sutharwala.com/static/css/main.4f22458c.chunk.css",
-    "main.js": "http://www.sutharwala.com/static/js/main.eb5d4f38.chunk.js",
-    "main.js.map": "http://www.sutharwala.com/static/js/main.eb5d4f38.chunk.js.map",
-    "runtime-main.js": "http://www.sutharwala.com/static/js/runtime-main.0b3d368f.js",
-    "runtime-main.js.map": "http://www.sutharwala.com/static/js/runtime-main.0b3d368f.js.map",
+    "main.css": "http://www.sutharwala.com/static/css/main.eb15cb72.chunk.css",
+    "main.js": "http://www.sutharwala.com/static/js/main.7055cfdb.chunk.js",
+    "main.js.map": "http://www.sutharwala.com/static/js/main.7055cfdb.chunk.js.map",
+    "runtime-main.js": "http://www.sutharwala.com/static/js/runtime-main.8cc00b10.js",
+    "runtime-main.js.map": "http://www.sutharwala.com/static/js/runtime-main.8cc00b10.js.map",
     "static/css/2.85a39506.chunk.css": "http://www.sutharwala.com/static/css/2.85a39506.chunk.css",
-    "static/js/2.020d8d7b.chunk.js": "http://www.sutharwala.com/static/js/2.020d8d7b.chunk.js",
-    "static/js/2.020d8d7b.chunk.js.map": "http://www.sutharwala.com/static/js/2.020d8d7b.chunk.js.map",
-    "static/js/3.1ea81a92.chunk.js": "http://www.sutharwala.com/static/js/3.1ea81a92.chunk.js",
-    "static/js/3.1ea81a92.chunk.js.map": "http://www.sutharwala.com/static/js/3.1ea81a92.chunk.js.map",
+    "static/js/2.55f6ef4d.chunk.js": "http://www.sutharwala.com/static/js/2.55f6ef4d.chunk.js",
+    "static/js/2.55f6ef4d.chunk.js.map": "http://www.sutharwala.com/static/js/2.55f6ef4d.chunk.js.map",
+    "static/js/3.200e95e6.chunk.js": "http://www.sutharwala.com/static/js/3.200e95e6.chunk.js",
+    "static/js/3.200e95e6.chunk.js.map": "http://www.sutharwala.com/static/js/3.200e95e6.chunk.js.map",
     "index.html": "http://www.sutharwala.com/index.html",
     "static/css/2.85a39506.chunk.css.map": "http://www.sutharwala.com/static/css/2.85a39506.chunk.css.map",
-    "static/css/main.4f22458c.chunk.css.map": "http://www.sutharwala.com/static/css/main.4f22458c.chunk.css.map",
-    "static/js/2.020d8d7b.chunk.js.LICENSE.txt": "http://www.sutharwala.com/static/js/2.020d8d7b.chunk.js.LICENSE.txt",
+    "static/css/main.eb15cb72.chunk.css.map": "http://www.sutharwala.com/static/css/main.eb15cb72.chunk.css.map",
+    "static/js/2.55f6ef4d.chunk.js.LICENSE.txt": "http://www.sutharwala.com/static/js/2.55f6ef4d.chunk.js.LICENSE.txt",
     "static/media/LOGO.b5b8671a.png": "http://www.sutharwala.com/static/media/LOGO.b5b8671a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b3d368f.js",
+    "static/js/runtime-main.8cc00b10.js",
     "static/css/2.85a39506.chunk.css",
-    "static/js/2.020d8d7b.chunk.js",
-    "static/css/main.4f22458c.chunk.css",
-    "static/js/main.eb5d4f38.chunk.js"
+    "static/js/2.55f6ef4d.chunk.js",
+    "static/css/main.eb15cb72.chunk.css",
+    "static/js/main.7055cfdb.chunk.js"
   ]
 }
