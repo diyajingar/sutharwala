@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "http://www.sutharwala.com/static/css/main.bcf63a2d.chunk.css",
-    "main.js": "http://www.sutharwala.com/static/js/main.7394c36f.chunk.js",
-    "main.js.map": "http://www.sutharwala.com/static/js/main.7394c36f.chunk.js.map",
+    "main.js": "http://www.sutharwala.com/static/js/main.b616745f.chunk.js",
+    "main.js.map": "http://www.sutharwala.com/static/js/main.b616745f.chunk.js.map",
     "runtime-main.js": "http://www.sutharwala.com/static/js/runtime-main.7d87baed.js",
     "runtime-main.js.map": "http://www.sutharwala.com/static/js/runtime-main.7d87baed.js.map",
     "static/css/2.85a39506.chunk.css": "http://www.sutharwala.com/static/css/2.85a39506.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.85a39506.chunk.css",
     "static/js/2.d036d235.chunk.js",
     "static/css/main.bcf63a2d.chunk.css",
-    "static/js/main.7394c36f.chunk.js"
+    "static/js/main.b616745f.chunk.js"
   ]
 }
