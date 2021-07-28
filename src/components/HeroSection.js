@@ -3,16 +3,20 @@ import React from "react";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 import Grid from "@material-ui/core/Grid";
 import LOGO from "../LOGO.png";
-
+import phone from "../phone.png";
+import mail from "../mail.png";
+import whatsappIcon from "../whatsappIcon.png";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
 import CloseIcon from "@material-ui/icons/Close";
 import CustomTextInput from "./CustomTextInput";
 import emailjs from "emailjs-com";
 import Divider from "@material-ui/core/Divider";
+
 
 const drawerWidth = 350;
 
@@ -117,7 +121,7 @@ function HeroSection(props) {
         >
           <div className={classes.drawerHeader}>
             <Grid item xs={10}>
-              <h4 className="text-3xl p-10 font-semibold">Inquiry Form</h4>
+              <h2 className="text-3xl p-10 font-semibold">Inquiry Form</h2>
             </Grid>
             <Grid item xs={2}>
             <CloseIcon  onClick={handleDrawerClose} />
@@ -189,8 +193,13 @@ function HeroSection(props) {
                 <button class="button" onClick={handleDrawerOpen}>
                   Contact Us
                 </button>
-                <div>
-                <WhatsAppIcon/><MailOutlineIcon/>
+                <div className="d-flex">
+                  <a href="https://wa.me/91886035436" target="_blank"><img src={whatsappIcon} alt="whatsapp"  className="socialIcon" /> </a>
+                 
+                  <a href="mailto:enquiry@sutharwala.com" target="_blank"><img src={mail} alt="email"  className="socialIcon" /></a>
+               
+                  <a href="tel:${886035436}"> <img src={phone} alt="phone" className="socialIcon"  /></a>
+              
               </div>
               </div>
              

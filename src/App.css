@@ -85,7 +85,7 @@ form{
   }
   .MuiSvgIcon-root {
 
-    margin: 0 0rem;
+    margin: 10px;
   }
 .mobile{
   display: none;
@@ -122,7 +122,7 @@ form {
   width: 170px;
 }
 h1{
-  font: caption !important;
+ 
   font-size: 40px !important;
   font-weight: bold;
   margin-bottom: 20px !important;
@@ -141,7 +141,7 @@ h1{
 }
 }
 .textStyle{
-  padding: 200px 50px;
+  padding: 150px 50px;
 }
 h1{
   font-size: 3rem;
@@ -154,7 +154,7 @@ h1 span{
   margin: 20px 0;
   background-color: #253f50;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
 }
 .heroimg{
@@ -170,4 +170,12 @@ h1 span{
 .closeButton{
   background: none;
   border: none;
+}
+.socialIcon{
+  width: 40px;
+  margin: 10px;
+}
+.d-flex{
+  display: flex;
+  
 }
